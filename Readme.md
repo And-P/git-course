@@ -70,6 +70,11 @@
 
 -----Apagando Tags e Branchs em Repositórios Remotos
 
+	git tag -d cod-tag (ex. 1.0.1 - só apaga local)
+	git push origin :1.0.0 (apaga tag remota)
+	git push origin :master (apaga branch remoto)
+
+
 ----- Observações Gerais:
 
 - falando de diff: "sempre use o git diff antes de fazer um commit".
