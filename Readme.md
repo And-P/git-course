@@ -8,7 +8,7 @@
 ----- Palavras-Chave:
 - prefixo: git <command>
 
-- commands: init, status, add, commit, log, diff, reset,branch, checkout, remote, pull, fetch, merge, remote, stash, shortlog, show  
+- commands: init, status, add, commit, log, diff, reset,branch, checkout, remote, pull, fetch, merge, remote, stash, shortlog, show, revert  
 
 - properties: HEAD, HEAD~1, HEAD~2, --soft, --hard, --help, --decorate, --author="Nome", --graph, -sn, --name-only
  		  
@@ -30,7 +30,20 @@
 
 	git checkout "Nome_Arquivo" (retira modificação do arquivo ainda na área de trabalho(unstaged file))
 	git reset HEAD (retira o arquivo do stage-area, para depois usar o comando git checkout e retirar as alterações indesejáveis) 
-	git reset "HashCode"(--soft, --mixed, --hard) retira commits 
+	git reset "HashCode"(--soft, --mixed, --hard) retira commits
+	git revert "Hash-Code" (hash do commit a ser removido)
+	
+--Branch
+	
+	git branch (lista os branchs disponíveis)
+	git checkout -b novo-branch (cria novo-branch)
+	git checkout novo-branch (entra em novo-branch)
+	git branch -D nome-branch (deleta nome-branch)
+
+--Tag
+	git tag (mostra tags geradas)
+	git tag -a 1.0.1 -m "Mensagem link" (cria tag)
+	git push origin master --tags
 
 --- Repositorio Remoto - GitHub
 	obs: antes, configurar a chave SSH 
@@ -55,10 +68,12 @@
 	- nome_do_arquivo : ignora o arquivo especificado
 	- um repositório, no https://github.com/github/gitignore, especifica padrões para desenvolvimento em varias plataformas(java, etc...) 
 
+-----Apagando Tags e Branchs em Repositórios Remotos
+
 ----- Observações Gerais:
 
 - falando de diff: "sempre use o git diff antes de fazer um commit".
 - git reset: "usa-se a HashCode anterior ao commit que se quer retirar"
-
+- revert: "ele retira as alterações, informa na log o revert e não apaga o commit de origem do problema da log - o revert serve pra resetar o arquivo sem perder as alterações que foram feitas"
 
 
