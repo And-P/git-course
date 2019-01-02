@@ -21,6 +21,8 @@
 	git shortlog (-sn)
 	git show "HashCode"
 	git diff (--name-only)
+	git checkout -b novo-branch
+	git branch
 	git stash (apply, list, show, drop, clear, create, store)
 	git config --global alias.s status 
 	
